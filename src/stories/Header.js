@@ -24,7 +24,7 @@ export const Header = ({ user, onLogin, onLogout, onCreateAccount }) => (
             />
           </g>
         </svg>
-        <h1>Changing this header title.</h1>
+        <h1>A header file change.</h1>
       </div>
       <div>
         {user ? (
