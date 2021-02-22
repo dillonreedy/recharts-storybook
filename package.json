@@ -1,6 +1,6 @@
 {
-  "name": "minimal-reactjs-boilerplate",
-  "version": "1.0.0",
+  "name": "recharts-storybook",
+  "version": "0.1.0",
   "description": "",
   "main": "index.js",
   "scripts": {
