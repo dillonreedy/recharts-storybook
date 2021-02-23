@@ -11,7 +11,7 @@ export const LineChartWrapper = (({width, height, data, margin, dataKey, strokeD
       <YAxis />
       <Tooltip />
       <Legend />
-      <Line type={type} dataKey="uv" stroke="#8884d8" />
+      <Line type={type} dataKey="price" stroke="#8884d8" />
     </LineChart>
   )
 });
@@ -47,14 +47,7 @@ LineChartWrapper.propTypes = {
   /**
    * The interpolation type of line and customized interpolation function can be set to type. It's the same as type in Area.
    */
-  type: PropTypes.oneOfType([
-    PropTypes.string,
-    PropTypes.func
-  ]),
-  /**
-   * 
-   */
-
+  type: PropTypes.oneOf(['basis' , 'basisClosed' , 'basisOpen' , 'linear' , 'linearClosed' , 'natural' , 'monotoneX' , 'monotoneY' , 'monotone' , 'step' , 'stepBefore' , 'stepAfter'])
 }
 
 LineChartWrapper.defaultProps = {
