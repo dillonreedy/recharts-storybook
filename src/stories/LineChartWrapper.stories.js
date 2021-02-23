@@ -5,7 +5,11 @@ export default {
   title: 'Charts/Line Chart',
   component: LineChartWrapper,
   argTypes: {
-    data: { control: 'object' }
+    data: { control: 'object' },
+    type: { 
+      control: 'select', 
+      options: ['basis' , 'basisClosed' , 'basisOpen' , 'linear' , 'linearClosed' , 'natural' , 'monotoneX' , 'monotoneY' , 'monotone' , 'step' , 'stepBefore' , 'stepAfter']
+    }
   },
   parameters: {
     docs: {
@@ -24,36 +28,36 @@ Simple.args = {
   height: 250,
   data: [
     {
-      "name": "Page A",
-      "uv": 4000,
+      "month": "Jan",
+      "price": 4000,
     },
     {
-      "name": "Page B",
-      "uv": 3000,
+      "month": "Feb",
+      "price": 3000,
     },
     {
-      "name": "Page C",
-      "uv": 2000,
+      "month": "Mar",
+      "price": 2000,
     },
     {
-      "name": "Page D",
-      "uv": 2780,
+      "month": "Apr",
+      "price": 2780,
     },
     {
-      "name": "Page E",
-      "uv": 1890,
+      "month": "Jun",
+      "price": 1890,
     },
     {
-      "name": "Page F",
-      "uv": 2390,
+      "month": "Jul",
+      "price": 2390,
     },
     {
-      "name": "Page G",
-      "uv": 3490,
+      "month": "Aug",
+      "price": 3490,
     }
   ],
   margin: { top: 5, right: 30, left: 20, bottom: 5 },
   strokeDashArray: "4",
-  dataKey: 'name',
+  dataKey: 'month',
   type: 'monotone'
 };
