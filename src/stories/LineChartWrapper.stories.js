@@ -9,6 +9,9 @@ export default {
     type: { 
       control: 'select', 
       options: ['basis' , 'basisClosed' , 'basisOpen' , 'linear' , 'linearClosed' , 'natural' , 'monotoneX' , 'monotoneY' , 'monotone' , 'step' , 'stepBefore' , 'stepAfter']
+    },
+    stroke: {
+      control: 'color'
     }
   },
   parameters: {
@@ -58,6 +61,8 @@ Simple.args = {
   ],
   margin: { top: 5, right: 30, left: 20, bottom: 5 },
   strokeDashArray: "4",
-  dataKey: 'month',
-  type: 'monotone'
+  xaxisDataKey: 'month',
+  type: 'monotone',
+  lineDataKey: 'price',
+  stroke: '#8884d8'
 };

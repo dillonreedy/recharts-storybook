@@ -2,16 +2,16 @@ import React from 'react';
 import { LineChart, CartesianGrid, XAxis, YAxis, Tooltip, Legend, Line } from 'recharts';
 import PropTypes from 'prop-types';
 
-export const LineChartWrapper = (({width, height, data, margin, dataKey, strokeDashArray, type, ...props}) => {
+export const LineChartWrapper = (({width, height, data, margin, xaxisDataKey, strokeDashArray, type, lineDataKey, stroke, ...props}) => {
 
   return (
     <LineChart width={width} height={height} data={data} margin={margin}>
       <CartesianGrid strokeDasharray={strokeDashArray} />
-      <XAxis dataKey={dataKey} />
+      <XAxis dataKey={xaxisDataKey} />
       <YAxis />
       <Tooltip />
       <Legend />
-      <Line type={type} dataKey="price" stroke="#8884d8" />
+      <Line type={type} dataKey={lineDataKey} stroke={stroke} />
     </LineChart>
   )
 });
@@ -40,14 +40,26 @@ LineChartWrapper.propTypes = {
   /**
    * The key of data displayed in the axis.
    */
-  dataKey: PropTypes.oneOfType([
+  xaxisDataKey: PropTypes.oneOfType([
     PropTypes.string,
     PropTypes.number
   ]),
   /**
    * The interpolation type of line and customized interpolation function can be set to type. It's the same as type in Area.
    */
-  type: PropTypes.oneOf(['basis' , 'basisClosed' , 'basisOpen' , 'linear' , 'linearClosed' , 'natural' , 'monotoneX' , 'monotoneY' , 'monotone' , 'step' , 'stepBefore' , 'stepAfter'])
+  type: PropTypes.oneOf(['basis' , 'basisClosed' , 'basisOpen' , 'linear' , 'linearClosed' , 'natural' , 'monotoneX' , 'monotoneY' , 'monotone' , 'step' , 'stepBefore' , 'stepAfter']),
+  /**
+   * The key or getter of a group of data which should be unique in a LineChart.
+   */
+  lineDataKey: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.number,
+    PropTypes.func
+  ]),
+  /**
+   * 
+   */
+  stroke: PropTypes.string
 }
 
 LineChartWrapper.defaultProps = {
@@ -56,6 +68,7 @@ LineChartWrapper.defaultProps = {
   data: [],
   margin: { top: 5, right: 5, bottom: 5, left: 5 },
   strokeDashArray: "1",
-  dataKey: null,
-  type: "linear"
+  xaxisDataKey: null,
+  type: 'linear',
+  lineDataKey: null
 }
