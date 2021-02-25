@@ -1,22 +1,22 @@
 import React from 'react';
-import { LineChart, CartesianGrid, XAxis, YAxis, Tooltip, Legend, Line } from 'recharts';
+import { LineChart as RechartsLineChart, CartesianGrid, XAxis, YAxis, Tooltip, Legend, Line } from 'recharts';
 import PropTypes from 'prop-types';
 
-export const LineChartWrapper = (({width, height, data, margin, xaxisDataKey, strokeDashArray, type, lineDataKey, stroke, ...props}) => {
+export const LineChart = (({width, height, data, margin, xaxisDataKey, strokeDashArray, type, lineDataKey, stroke, ...props}) => {
 
   return (
-    <LineChart width={width} height={height} data={data} margin={margin}>
+    <RechartsLineChart width={width} height={height} data={data} margin={margin}>
       <CartesianGrid strokeDasharray={strokeDashArray} />
       <XAxis dataKey={xaxisDataKey} />
       <YAxis />
       <Tooltip />
       <Legend />
       <Line type={type} dataKey={lineDataKey} stroke={stroke} />
-    </LineChart>
+    </RechartsLineChart>
   )
 });
 
-LineChartWrapper.propTypes = {
+LineChart.propTypes = {
   /**
    * The width of chart container.
    */
@@ -62,7 +62,7 @@ LineChartWrapper.propTypes = {
   stroke: PropTypes.string
 }
 
-LineChartWrapper.defaultProps = {
+LineChart.defaultProps = {
   width: 0,
   height: 0,
   data: [],

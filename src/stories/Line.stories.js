@@ -20,8 +20,8 @@ export default {
 
 const Template = (args) => <Line {...args} />;
 
-export const OnlyDataKeySpecified = Template.bind({});
-OnlyDataKeySpecified.args = {
+export const Default = Template.bind({});
+Default.args = {
   dataKey: 'price',
 }
 

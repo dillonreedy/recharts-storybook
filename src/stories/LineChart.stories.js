@@ -1,9 +1,9 @@
 import React from 'react';
-import { LineChartWrapper } from './LineChartWrapper';
+import { LineChart } from './LineChart';
 
 export default {
-  title: 'Charts/Line Chart',
-  component: LineChartWrapper,
+  title: 'Line Chart/LineChart',
+  component: LineChart,
   argTypes: {
     data: { control: 'object' },
     type: { 
@@ -23,7 +23,7 @@ export default {
   }
 };
 
-const Template = (args) => <LineChartWrapper {...args} />;
+const Template = (args) => <LineChart {...args} />;
 
 export const Simple = Template.bind({});
 Simple.args = {
