@@ -2,7 +2,7 @@ import React from 'react';
 import { LineChart, CartesianGrid, XAxis, YAxis, Tooltip, Legend, Line as RechartsLine } from 'recharts';
 import PropTypes from 'prop-types';
 
-export const Line = (({type, dataKey, stroke, ...props}) => {
+export const Line = (({type, dataKey, stroke, onClick, ...props}) => {
   const width = 770;
   const height = 250;
   const data = [
@@ -47,7 +47,7 @@ export const Line = (({type, dataKey, stroke, ...props}) => {
       <YAxis />
       <Tooltip />
       <Legend />
-      <RechartsLine type={type} dataKey={dataKey} stroke={stroke} />
+      <RechartsLine type={type} dataKey={dataKey} stroke={stroke} onClick={onClick}/>
     </LineChart>
   )
 });
@@ -68,7 +68,11 @@ Line.propTypes = {
   /**
    * Is for defining the border color.
    */
-  stroke: PropTypes.string
+  stroke: PropTypes.string,
+  /**
+   * The customized event handler of click on the area in this group
+   */
+  onClick: PropTypes.func
 }
 
 Line.defaultProps = {

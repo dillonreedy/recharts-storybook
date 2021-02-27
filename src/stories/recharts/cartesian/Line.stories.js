@@ -13,7 +13,8 @@ export default {
       control: 'color'
     },
     onClick: {
-      action: 'clicked'
+      action: 'line clicked',
+      disable: true
     }
   },
 };
