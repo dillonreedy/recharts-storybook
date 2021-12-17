@@ -1,24 +1,39 @@
 import React from 'react';
-import { BarChart } from './BarChart';
+import { BarChart, CartesianGrid, XAxis, YAxis, Tooltip, Legend, Bar } from 'recharts';
+import { BarChartService } from './barchart.service';
 
+const argTypes = BarChartService.getArgTypes();
 export default {
   title: 'Recharts/Bar Chart',
   component: BarChart,
-  argTypes: {
-    pvStroke: {
-        control: 'color'
-    },
-    uvStroke: {
-        control: 'color'
-    },
-  },
+  argTypes
 };
 
-const Template = (args) => <BarChart {...args} />;
+const Template = (({dataKey, pvStroke, uvStroke, strokeDasharray, dataKeyBar1, dataKeyBar2, ...props}) => {  
+  return (
+    <BarChart {...props}>
+    <CartesianGrid strokeDasharray={strokeDasharray} />
+    <XAxis dataKey={dataKey} />
+    <YAxis />
+    <Tooltip />
+    <Legend />
+    <Bar dataKey={dataKeyBar1} fill={pvStroke} />
+    <Bar dataKey={dataKeyBar2} fill={uvStroke} />
+  </BarChart>
+  )
+});
 
 export const Simple = Template.bind({});
+const {width, height, data, margin} = BarChartService.getProps();
 Simple.args = {
   dataKey: 'name',
   pvStroke: '#8884d8',
-  uvStroke: '#82ca9d'
+  uvStroke: '#82ca9d',
+  strokeDasharray: '3 3',
+  dataKeyBar1: 'uv',
+  dataKeyBar2: 'pv',
+  width,
+  height,
+  data,
+  margin
 };
