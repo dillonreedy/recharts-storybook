@@ -2,7 +2,7 @@ import React from 'react';
 import { BarChart } from './BarChart';
 
 export default {
-  title: 'Recharts/cartesian/BarChart',
+  title: 'Recharts/Bar Chart',
   component: BarChart,
   argTypes: {
     pvStroke: {

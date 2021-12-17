@@ -2,7 +2,7 @@ import React from 'react';
 import { Line } from './Line';
 
 export default {
-  title: 'Recharts/cartesian/Line',
+  title: 'Recharts/Line Chart/Line Controls',
   component: Line,
   argTypes: {
     type: { 

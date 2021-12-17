@@ -2,7 +2,7 @@ import React from 'react';
 import { LineChart } from './LineChart';
 
 export default {
-  title: 'Recharts/chart/LineChart',
+  title: 'Recharts/Line Chart',
   component: LineChart,
   argTypes: {
     data: { control: 'object' },
