@@ -14,5 +14,5 @@ export default {
 const TemplateCopy = BarChartService.getTemplate();
 
 export const Bar = TemplateCopy.bind({});
-Bar.parameters = { controls: {include: ['uvStroke', 'pvStroke']}}
+Bar.parameters = { controls: {include: ['barDataKey', 'fill']}}
 Bar.args = args;

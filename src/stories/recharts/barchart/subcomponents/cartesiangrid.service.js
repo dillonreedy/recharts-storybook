@@ -1,4 +1,3 @@
-import { BarChartService } from "../barchart.service"
 
 export class CartesianGridService {
     static getArgs() {

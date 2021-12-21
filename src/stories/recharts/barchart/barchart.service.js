@@ -1,10 +1,11 @@
 import React from 'react';
 import { BarChart, CartesianGrid, XAxis, YAxis, Tooltip, Legend, Bar } from 'recharts';
+import { BarService } from './subcomponents/bar.service';
 import { CartesianGridService } from './subcomponents/cartesiangrid.service';
 
 export class BarChartService {
   static getTemplate = () => {
-    return (({dataKey, pvStroke, uvStroke, strokeDasharray, dataKeyBar1, dataKeyBar2, ...props}) => {  
+    return (({dataKey, pvStroke, uvStroke, strokeDasharray, barDataKey, fill, ...props}) => {  
       return (
         <BarChart {...props}>
         <CartesianGrid strokeDasharray={strokeDasharray} />
@@ -12,8 +13,7 @@ export class BarChartService {
         <YAxis />
         <Tooltip />
         <Legend />
-        <Bar dataKey={dataKeyBar1} fill={uvStroke} />
-        <Bar dataKey={dataKeyBar2} fill={pvStroke} />
+        <Bar dataKey={barDataKey} fill={fill} />
       </BarChart>
       ) 
     });
@@ -47,44 +47,30 @@ export class BarChartService {
       {
         name: 'Page A',
         uv: 4000,
-        pv: 2400,
-        amt: 2400,
       },
       {
         name: 'Page B',
         uv: 3000,
-        pv: 1398,
-        amt: 2210,
       },
       {
         name: 'Page C',
         uv: 2000,
-        pv: 9800,
-        amt: 2290,
       },
       {
         name: 'Page D',
         uv: 2780,
-        pv: 3908,
-        amt: 2000,
       },
       {
         name: 'Page E',
         uv: 1890,
-        pv: 4800,
-        amt: 2181,
       },
       {
         name: 'Page F',
         uv: 2390,
-        pv: 3800,
-        amt: 2500,
       },
       {
         name: 'Page G',
         uv: 3490,
-        pv: 4300,
-        amt: 2100,
       },
     ];
     const margin = { top: 5, right: 30, left: 20, fabottom: 5 };
@@ -95,10 +81,7 @@ export class BarChartService {
   static getSubcomponentArgs() {
     return {
       dataKey: 'name',
-      pvStroke: '#8884d8',
-      uvStroke: '#82ca9d',
-      dataKeyBar1: 'uv',
-      dataKeyBar2: 'pv',
+      ...BarService.getArgs(),
       ...CartesianGridService.getArgs()
     };
   };
