@@ -21,5 +21,5 @@ export const Red = TemplateCopy.bind({});
 Red.parameters = { controls: {include: ['barDataKey', 'fill']}}
 Red.args = {
   ...Blue.args,
-  fill: '#ff294f'
+  fill: '#ca0025'
 };
