@@ -22,7 +22,7 @@ export class BarService {
     static getArgs() {
       return {
         barDataKey: 'uv',
-        fill: '#8884d8'
+        fill: '#463edb'
       }
     }
   }
