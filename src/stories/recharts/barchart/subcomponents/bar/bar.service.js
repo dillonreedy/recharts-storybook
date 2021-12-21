@@ -1,4 +1,4 @@
-import { BarChartService } from "../barchart.service";
+import { BarChartService } from "../../barchart.service";
 
 export class BarService {
     static getArgTypes() {

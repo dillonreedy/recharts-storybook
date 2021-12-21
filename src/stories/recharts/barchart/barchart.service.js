@@ -1,8 +1,8 @@
 import React from 'react';
 import { BarChart, CartesianGrid, XAxis, YAxis, Tooltip, Legend, Bar } from 'recharts';
-import { BarService } from './subcomponents/bar.service';
-import { CartesianGridService } from './subcomponents/cartesiangrid.service';
-import { XAxisService } from './subcomponents/xaxis.service';
+import { BarService } from './subcomponents/bar/bar.service';
+import { CartesianGridService } from './subcomponents/cartesiangrid/cartesiangrid.service';
+import { XAxisService } from './subcomponents/xaxis/xaxis.service';
 
 export class BarChartService {
   static getTemplate = () => {

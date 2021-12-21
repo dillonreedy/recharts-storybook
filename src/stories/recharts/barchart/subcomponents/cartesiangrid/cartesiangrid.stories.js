@@ -1,5 +1,5 @@
-import { BarChartService } from '../barchart.service';
-import { combine } from '../args.service';
+import { BarChartService } from '../../barchart.service';
+import { combine } from '../../args.service';
 import { CartesianGridService } from './cartesiangrid.service';
 
 const barChartArgs = BarChartService.getArgs();

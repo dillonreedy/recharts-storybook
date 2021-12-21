@@ -1,5 +1,5 @@
-import { BarChartService } from '../barchart.service';
-import { combine } from '../args.service';
+import { BarChartService } from '../../barchart.service';
+import { combine } from '../../args.service';
 import { XAxisService } from './xaxis.service';
 
 const barChartArgs = BarChartService.getArgs();
