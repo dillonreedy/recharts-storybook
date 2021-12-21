@@ -2,6 +2,7 @@ import React from 'react';
 import { BarChart, CartesianGrid, XAxis, YAxis, Tooltip, Legend, Bar } from 'recharts';
 import { BarService } from './subcomponents/bar.service';
 import { CartesianGridService } from './subcomponents/cartesiangrid.service';
+import { XAxisService } from './subcomponents/xaxis.service';
 
 export class BarChartService {
   static getTemplate = () => {
@@ -80,7 +81,7 @@ export class BarChartService {
 
   static getSubcomponentArgs() {
     return {
-      dataKey: 'name',
+      ...XAxisService.getArgs(),
       ...BarService.getArgs(),
       ...CartesianGridService.getArgs()
     };
