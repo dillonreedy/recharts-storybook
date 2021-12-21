@@ -5,11 +5,7 @@ import { BarService } from './bar.service';
 const barChartArgs = BarChartService.getArgs();
 const subcomponentArgs = BarChartService.getSubcomponentArgs();
 const args = combine(barChartArgs, subcomponentArgs);
-const args2 = {
-  ...args
-}
-args2['fill'] = '#ff294f';
-args2['barDataKey'] = 'uv';
+
 export default {
   title: 'Recharts/Bar Chart/Subcomponents/Bar',
   argTypes: BarService.getArgTypes()
@@ -23,4 +19,7 @@ Blue.args = args;
 
 export const Red = TemplateCopy.bind({});
 Red.parameters = { controls: {include: ['barDataKey', 'fill']}}
-Red.args = args2;
+Red.args = {
+  ...Blue.args,
+  fill: '#ff294f'
+};
