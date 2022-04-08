@@ -1,5 +1,5 @@
 import React from 'react';
-import { AreaChartComponent } from './AreaChart';
+import { AreaChartComponent } from './AreaChartComponent';
 import { subDays } from "date-fns";
 
 export default {
