@@ -4,11 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "webpack-dev-server --mode=development --open --hot",
-    "build": "webpack --mode=production",
-    "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook -o ./build",
-    "create-build-folder": "mkdirp ./build"
+    "start": "npm run build && start-storybook -p 6006",
+    "build": "mkdirp ./build && build-storybook -o ./build"
   },
   "keywords": [],
   "author": "",
