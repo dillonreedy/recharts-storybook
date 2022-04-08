@@ -1,3 +1,6 @@
+# Recharts Repo
+This is the link to the [Recharts Repo](https://github.com/recharts/recharts)
+
 # Recharts-Storybook
 
 Using this [repo](https://github.com/Nikhil-Kumaran/minimal-reactjs-boilerplate) I created the beginning of our react project.
