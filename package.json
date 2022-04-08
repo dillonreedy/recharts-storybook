@@ -7,13 +7,15 @@
     "start": "webpack-dev-server --mode=development --open --hot",
     "build": "webpack --mode=production",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook -o docs-build -s ./src/stories/assets"
+    "build-storybook": "build-storybook -o ./build -s ./src/stories/assets",
+    "create-build-folder": "mkdirp ./build"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
     "fs-extra": "^9.0.1",
+    "mkdirp": "^1.0.4",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "recharts": "^2.0.7"
