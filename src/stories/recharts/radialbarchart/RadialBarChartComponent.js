@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import * as _ from 'lodash';
-import { RadialBarChart, RadialBar, Cell, Legend, Tooltip, LabelList } from 'recharts';
+import { RadialBarChart, RadialBar, Cell, Legend, Tooltip,
+  LabelList } from 'recharts';
 import { changeNumberOfData } from '../../../utils/utils';
 const initialState = {
     data: [],
@@ -29,6 +30,10 @@ export default class RadialBarChartComponent extends Component {
 
   render () {
     const { data, colors } = this.props;
+    const style = {
+      lineHeight: '24px',
+      left: 300,
+    };
 
     return (
       <div className='radial-bar-charts'>
