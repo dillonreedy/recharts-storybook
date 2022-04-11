@@ -22,8 +22,13 @@ const data = [
     { name: '50+', uv: 62, amt: 2.63, pv: -2800, fill: '#d0ed57' },
     { name: 'unknown', uv: 38, amt: 6.67, pv: 4800, fill: '#ffc658' },
   ];
+  const style = {
+    lineHeight: '24px',
+    left: 300,
+  };
 export const Simple = Template.bind({});
 Simple.args = {
     data,
-    colors  
+    colors,
+    style  
 };

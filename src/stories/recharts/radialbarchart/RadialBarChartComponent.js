@@ -29,11 +29,8 @@ export default class RadialBarChartComponent extends Component {
   }
 
   render () {
-    const { data, colors } = this.props;
-    const style = {
-      lineHeight: '24px',
-      left: 300,
-    };
+    const { data, colors, style } = this.props;
+
 
     return (
       <div className='radial-bar-charts'>
