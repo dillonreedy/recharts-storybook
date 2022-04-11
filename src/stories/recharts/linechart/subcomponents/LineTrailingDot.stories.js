@@ -7,7 +7,7 @@ export default {
 };
 
 const Template = (args) => <LineTrailingDotComponent {...args} />;
-const data = [
+const lineData = [
   {
     "month": "Jan",
     "price": 4000,
@@ -38,17 +38,9 @@ const data = [
   }
 ];
 
-const lastDot = data[data.length-1];
-const lastDotData = data.map(x => ({...x, lastDot: (x.month === lastDot.month && x.price === lastDot.price) ? lastDot.price : undefined}));
+const lastDot = lineData[lineData.length-1];
+const data = lineData.map(x => ({...x, lastDot: (x.month === lastDot.month && x.price === lastDot.price) ? lastDot.price : undefined}));
 export const TrailingDot = Template.bind({});
 TrailingDot.args = {
-  width: 770,
-  height: 250,
-  data: lastDotData,
-  margin: { top: 5, right: 30, left: 20, bottom: 5 },
-  strokeDashArray: "4",
-  xaxisDataKey: 'month',
-  type: 'monotone',
-  lineDataKey: 'price',
-  stroke: '#8884d8'
+  data,
 };
