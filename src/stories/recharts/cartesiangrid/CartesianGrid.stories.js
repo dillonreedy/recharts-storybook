@@ -12,10 +12,13 @@ const verticalPoints = [100, 200, 300, 400];
 
 const verticalFill=['red', '#eee'];
 const horizontalFill=['#eee', 'yellow'];
+
+const strokeDasharray='10 10';
 export const Simple = Template.bind({});
 Simple.args = {
     horizontalPoints,
     verticalPoints,
     verticalFill,
-    horizontalFill
+    horizontalFill,
+    strokeDasharray
 };
