@@ -1,3 +1,6 @@
+# Recharts Repo
+This is the link to the [Recharts Repo](https://github.com/recharts/recharts)
+
 # Recharts-Storybook
 
 Using this [repo](https://github.com/Nikhil-Kumaran/minimal-reactjs-boilerplate) I created the beginning of our react project.
@@ -11,3 +14,15 @@ npx sb init
 To get recharts and storybook into the project.
 
 After the above has happened, I followed along with [this guide](https://dev.to/kouts/deploy-storybook-to-github-pages-3bij) to hookup github pages to the storybook in the repo.
+
+# How to run application locally
+
+Simply running the command `npm run start` will create a folder ./build, then it will run the storybook-build command, and place the contents of the build into the ./build folder.
+
+Then finally the command storybook-start will be ran to actually start the application.
+
+# How to have changes placed onto the github pages website
+
+Once you have new changes staged and committed, simply pushing the changes onto Main will cause the github build and deploy actions to create a build, and then deploy that build onto the github pages branch.
+
+This is the link to the [Github Actions](https://github.com/dillonreedy/recharts-storybook/actions)
