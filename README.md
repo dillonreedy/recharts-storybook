@@ -1,6 +1,6 @@
 ![N|Solid](https://i.imgur.com/JejZsT9.png)
 ## What I'm aiming for
-To make development faster for everyone using Recharts.
+To make development faster for everyone using Recharts. Eventually I hope we can make the [Storybook Showcase](https://storybook.js.org/showcase/).
 
 ## How I'm going to do it
 * Rewriting the old recharts.org API docs into Storybook docs format
