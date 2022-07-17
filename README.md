@@ -1,28 +1,12 @@
-# Recharts Repo
-This is the link to the [Recharts Repo](https://github.com/recharts/recharts)
+![N|Solid](https://i.imgur.com/JejZsT9.png)
 
-# Recharts-Storybook
+## Why we are here
+* We'll make development faster for the developers using Recharts in their websites by isolating components.
+* The docs site has become outdated, so needs to update it! So why not in the Storybook Docs?
+* Opening Recharts up to the ecosystem of Storybook addons that help you do things like fine-tune responsive layouts or verify accessibility.
 
-Using this [repo](https://github.com/Nikhil-Kumaran/minimal-reactjs-boilerplate) I created the beginning of our react project.
+## Learning resources
+If you want to learn more about the component-driven approach that Storybook enables, this [site](https://www.componentdriven.org/) is a good place to start.
+If you want a guided tutorial through building a simple application with Storybook in your framework and language, our [tutorials](https://storybook.js.org/tutorials/) have your back.
 
-We had to use the repository above because recharts is incompatible with the latest version of React (which at the moment of writing is v17)
-
-I then ran the commands:
-npm install recharts
-npx sb init
-
-To get recharts and storybook into the project.
-
-After the above has happened, I followed along with [this guide](https://dev.to/kouts/deploy-storybook-to-github-pages-3bij) to hookup github pages to the storybook in the repo.
-
-# How to run application locally
-
-Simply running the command `npm run start` will create a folder ./build, then it will run the storybook-build command, and place the contents of the build into the ./build folder.
-
-Then finally the command storybook-start will be ran to actually start the application.
-
-# How to have changes placed onto the github pages website
-
-Once you have new changes staged and committed, simply pushing the changes onto Main will cause the github build and deploy actions to create a build, and then deploy that build onto the github pages branch.
-
-This is the link to the [Github Actions](https://github.com/dillonreedy/recharts-storybook/actions)
+[![N|Solid](https://i.imgur.com/7av4GlE.png)](https://recharts.org/en-US/api)
