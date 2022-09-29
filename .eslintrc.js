@@ -18,5 +18,6 @@ module.exports = {
   ],
   rules: {
     'import/prefer-default-export': 'off',
+    quotes: [2, 'single', 'avoid-escape'],
   },
 };
