@@ -1,5 +1,5 @@
-import React, { Component } from 'react';
-import { Surface, PolarGrid } from 'recharts';
+import React, { Component } from "react";
+import { Surface, PolarGrid } from "recharts";
 
 export default class PolarGridComponent extends Component {
   constructor(props) {

@@ -1,5 +1,5 @@
-import React, { Component } from 'react';
-import { Surface, Pie } from 'recharts';
+import React, { Component } from "react";
+import { Surface, Pie } from "recharts";
 
 export default class PieComponent extends Component {
   constructor(props) {

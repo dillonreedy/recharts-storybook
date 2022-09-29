@@ -1,10 +1,14 @@
-import React, { Component } from 'react';
-import * as _ from 'lodash';
+import React, { Component } from "react";
+import * as _ from "lodash";
 import {
-  RadialBarChart, RadialBar, Cell, Legend, Tooltip,
+  RadialBarChart,
+  RadialBar,
+  Cell,
+  Legend,
+  Tooltip,
   LabelList,
-} from 'recharts';
-import { changeNumberOfData } from '../../../utils/utils';
+} from "recharts";
+import { changeNumberOfData } from "../../../utils/utils";
 
 const initialState = {
   data: [],
@@ -20,15 +24,20 @@ export default class RadialBarChartComponent extends Component {
     this.chartRef = React.createRef();
   }
 
-  handleChangeData = () => {
-    this.setState(() => _.mapValues(initialState, changeNumberOfData));
-  };
-
   componentDidMount() {
-    if (this.chartRef.current !== undefined && this.chartRef !== undefined && this.chartRef.current !== null && this.chartRef !== null) {
+    if (
+      this.chartRef.current !== undefined &&
+      this.chartRef !== undefined &&
+      this.chartRef.current !== null &&
+      this.chartRef !== null
+    ) {
       console.log(this.chartRef.current.getItemByXY({ x: 150, y: 100 }));
     }
   }
+
+  handleChangeData = () => {
+    this.setState(() => _.mapValues(initialState, changeNumberOfData));
+  };
 
   render() {
     const { data, colors, style } = this.props;
@@ -57,14 +66,19 @@ export default class RadialBarChartComponent extends Component {
             ref={this.chartRef.current}
           >
             <RadialBar minPointSize={15} background dataKey="uv">
-              {
-                data.map((entry, index) => (
-                  <Cell key={`cell-${index}`} fill={colors[index]} />
-                ))
-              }
+              {data.map((entry, index) => (
+                <Cell key={`cell-${index}`} fill={colors[index]} />
+              ))}
               <LabelList position="insideEnd" fill="#fff" fontSize={10} />
             </RadialBar>
-            <Legend iconSize={10} width={120} height={140} layout="vertical" verticalAlign="middle" wrapperStyle={style} />
+            <Legend
+              iconSize={10}
+              width={120}
+              height={140}
+              layout="vertical"
+              verticalAlign="middle"
+              wrapperStyle={style}
+            />
             <Tooltip />
           </RadialBarChart>
         </div>
@@ -85,7 +99,14 @@ export default class RadialBarChartComponent extends Component {
             <RadialBar background dataKey="pv">
               <LabelList position="end" />
             </RadialBar>
-            <Legend iconSize={10} width={120} height={140} layout="vertical" verticalAlign="middle" wrapperStyle={style} />
+            <Legend
+              iconSize={10}
+              width={120}
+              height={140}
+              layout="vertical"
+              verticalAlign="middle"
+              wrapperStyle={style}
+            />
             <Tooltip />
           </RadialBarChart>
         </div>
