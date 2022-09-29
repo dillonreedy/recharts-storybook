@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
 import {
   Bar,
   XAxis,
@@ -6,7 +6,7 @@ import {
   CartesianGrid,
   Legend,
   BarChart,
-} from 'recharts';
+} from "recharts";
 
 export default class StackedBarChartComponent extends Component {
   constructor(props) {

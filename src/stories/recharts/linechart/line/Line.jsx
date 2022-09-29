@@ -1,8 +1,8 @@
-import React from 'react';
+import React from "react";
 import {
   LineChart, CartesianGrid, XAxis, YAxis, Tooltip, Legend, Line as RechartsLine,
-} from 'recharts';
-import PropTypes from 'prop-types';
+} from "recharts";
+import PropTypes from "prop-types";
 
 export function Line({
   type, dataKey, stroke, onClick, ...props
@@ -11,39 +11,39 @@ export function Line({
   const height = 250;
   const data = [
     {
-      month: 'Jan',
+      month: "Jan",
       price: 4000,
     },
     {
-      month: 'Feb',
+      month: "Feb",
       price: 3000,
     },
     {
-      month: 'Mar',
+      month: "Mar",
       price: 2000,
     },
     {
-      month: 'Apr',
+      month: "Apr",
       price: 2780,
     },
     {
-      month: 'Jun',
+      month: "Jun",
       price: 1890,
     },
     {
-      month: 'Jul',
+      month: "Jul",
       price: 2390,
     },
     {
-      month: 'Aug',
+      month: "Aug",
       price: 3490,
     },
   ];
   const margin = {
     top: 5, right: 30, left: 20, fabottom: 5,
   };
-  const strokeDashArray = '4';
-  const xaxisDataKey = 'month';
+  const strokeDashArray = "4";
+  const xaxisDataKey = "month";
 
   return (
     <LineChart width={width} height={height} data={data} margin={margin}>
@@ -61,7 +61,7 @@ Line.propTypes = {
   /**
    * The interpolation type of line and customized interpolation function can be set to type. It's the same as type in Area.
    */
-  type: PropTypes.oneOf(['basis', 'basisClosed', 'basisOpen', 'linear', 'linearClosed', 'natural', 'monotoneX', 'monotoneY', 'monotone', 'step', 'stepBefore', 'stepAfter']),
+  type: PropTypes.oneOf(["basis", "basisClosed", "basisOpen", "linear", "linearClosed", "natural", "monotoneX", "monotoneY", "monotone", "step", "stepBefore", "stepAfter"]),
   /**
    * The key or getter of a group of data which should be unique in a LineChart.
    */
@@ -81,7 +81,7 @@ Line.propTypes = {
 };
 
 Line.defaultProps = {
-  type: 'linear',
+  type: "linear",
   dataKey: null,
-  stroke: '#3182bd',
+  stroke: "#3182bd",
 };

@@ -1,4 +1,4 @@
-import { BarChartService } from '../../barchart.service';
+import { BarChartService } from "../../barchart.service";
 
 export class BarService {
   static getArgTypes() {
@@ -6,23 +6,23 @@ export class BarService {
     return {
       barDataKey: {
         control: {
-          type: 'select',
+          type: "select",
         },
         options: Object.keys(data[0]),
-        description: 'The data key the component binds to within the given data.',
+        description: "The data key the component binds to within the given data.",
       },
       fill: {
-        control: 'color',
-        description: 'The color of the bar.',
-        defaultValue: { summary: '#8884d8' },
+        control: "color",
+        description: "The color of the bar.",
+        defaultValue: { summary: "#8884d8" },
       },
     };
   }
 
   static getArgs() {
     return {
-      barDataKey: 'uv',
-      fill: '#463edb',
+      barDataKey: "uv",
+      fill: "#463edb",
     };
   }
 }

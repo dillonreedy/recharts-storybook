@@ -1,6 +1,6 @@
-import React, { Component } from 'react';
-import { Surface, Curve, Layer } from 'recharts';
-import { curveCardinalClosed, curveCatmullRomOpen } from 'd3-shape';
+import React, { Component } from "react";
+import { Surface, Curve, Layer } from "recharts";
+import { curveCardinalClosed, curveCatmullRomOpen } from "d3-shape";
 
 export default class CurveComponent extends Component {
   constructor(props) {

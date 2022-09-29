@@ -1,8 +1,8 @@
-import React from 'react';
-import CartesianAxisComponent from './CartesianAxisComponent';
+import React from "react";
+import CartesianAxisComponent from "./CartesianAxisComponent";
 
 export default {
-  title: 'Recharts/Cartesian Axis',
+  title: "Recharts/Cartesian Axis",
   component: CartesianAxisComponent,
 };
 

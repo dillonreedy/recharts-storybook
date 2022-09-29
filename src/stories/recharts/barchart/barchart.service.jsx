@@ -1,12 +1,12 @@
-import React from 'react';
+import React from "react";
 import {
   BarChart, CartesianGrid, XAxis, YAxis, Tooltip, Legend, Bar,
-} from 'recharts';
-import { BarService } from './subcomponents/bar/bar.service';
-import { XAxisService } from './subcomponents/xaxis/xaxis.service';
+} from "recharts";
+import { BarService } from "./subcomponents/bar/bar.service";
+import { XAxisService } from "./subcomponents/xaxis/xaxis.service";
 
 export class BarChartService {
-  static getTemplate = () => (function ({
+  static getTemplate = () => function ({
     dataKey, pvStroke, uvStroke, strokeDasharray, barDataKey, fill, ...props
   }) {
     return (
@@ -19,25 +19,25 @@ export class BarChartService {
         <Bar dataKey={barDataKey} fill={fill} />
       </BarChart>
     );
-  });
+  };
 
   static getArgTypes() {
     return {
       width: {
-        description: 'The width of the barchart.',
-        defaultValue: { summary: '0' },
+        description: "The width of the barchart.",
+        defaultValue: { summary: "0" },
       },
       height: {
-        description: 'The height of the barchart.',
-        defaultValue: { summary: '0' },
+        description: "The height of the barchart.",
+        defaultValue: { summary: "0" },
       },
       data: {
-        description: 'The source data, in which each element is an object.',
-        defaultValue: { summary: '[]' },
+        description: "The source data, in which each element is an object.",
+        defaultValue: { summary: "[]" },
       },
       margin: {
-        description: 'The sizes of whitespace around the container.',
-        defaultValue: { summary: '{ top: 5, right: 5, bottom: 5, left: 5 }' },
+        description: "The sizes of whitespace around the container.",
+        defaultValue: { summary: "{ top: 5, right: 5, bottom: 5, left: 5 }" },
       },
     };
   }
@@ -47,31 +47,31 @@ export class BarChartService {
     const height = 250;
     const data = [
       {
-        name: 'Page A',
+        name: "Page A",
         uv: 4000,
       },
       {
-        name: 'Page B',
+        name: "Page B",
         uv: 3000,
       },
       {
-        name: 'Page C',
+        name: "Page C",
         uv: 2000,
       },
       {
-        name: 'Page D',
+        name: "Page D",
         uv: 2780,
       },
       {
-        name: 'Page E',
+        name: "Page E",
         uv: 1890,
       },
       {
-        name: 'Page F',
+        name: "Page F",
         uv: 2390,
       },
       {
-        name: 'Page G',
+        name: "Page G",
         uv: 3490,
       },
     ];

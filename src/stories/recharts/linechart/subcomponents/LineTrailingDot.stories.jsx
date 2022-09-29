@@ -1,8 +1,8 @@
-import React from 'react';
-import { LineTrailingDotComponent } from './LineTrailingDotComponent';
+import React from "react";
+import { LineTrailingDotComponent } from "./LineTrailingDotComponent";
 
 export default {
-  title: 'Recharts/Line Chart/Customized Dots',
+  title: "Recharts/Line Chart/Customized Dots",
   component: LineTrailingDotComponent,
 };
 
@@ -11,31 +11,31 @@ function Template(args) {
 }
 const lineData = [
   {
-    month: 'Jan',
+    month: "Jan",
     price: 4000,
   },
   {
-    month: 'Feb',
+    month: "Feb",
     price: 3000,
   },
   {
-    month: 'Mar',
+    month: "Mar",
     price: 2000,
   },
   {
-    month: 'Apr',
+    month: "Apr",
     price: 2780,
   },
   {
-    month: 'Jun',
+    month: "Jun",
     price: 1890,
   },
   {
-    month: 'Jul',
+    month: "Jul",
     price: 2390,
   },
   {
-    month: 'Aug',
+    month: "Aug",
     price: 3490,
   },
 ];

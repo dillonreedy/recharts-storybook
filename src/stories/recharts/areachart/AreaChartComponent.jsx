@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 import {
   ResponsiveContainer,
   AreaChart,
@@ -7,21 +7,21 @@ import {
   Area,
   Tooltip,
   CartesianGrid,
-} from 'recharts';
-import { format, parseISO } from 'date-fns';
-import './area-chart.css';
+} from "recharts";
+import { format, parseISO } from "date-fns";
+import "./area-chart.css";
 
 function CustomTooltip({ active, payload, label }) {
   console.log(payload);
-  if (typeof payload !== 'undefined') {
+  if (typeof payload !== "undefined") {
     if (active) {
       return (
         <div className="tooltip">
-          <h4>{format(parseISO(label), 'eeee, d MMM, yyyy')}</h4>
+          <h4>{format(parseISO(label), "eeee, d MMM, yyyy")}</h4>
           <p>
             $
             {payload[0].value.toFixed(2)}
-            {' '}
+            {" "}
             CAD
           </p>
         </div>
@@ -51,9 +51,9 @@ export function AreaChartComponent({ data }) {
           tickFormatter={(str) => {
             const date = parseISO(str);
             if (date.getDate() % 7 === 0) {
-              return format(date, 'MMM, d');
+              return format(date, "MMM, d");
             }
-            return '';
+            return "";
           }}
         />
 

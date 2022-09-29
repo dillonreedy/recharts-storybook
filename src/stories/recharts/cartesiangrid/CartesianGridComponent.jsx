@@ -1,6 +1,6 @@
-import React, { Component } from 'react';
-import { Surface, CartesianGrid } from 'recharts';
-import PropTypes from 'prop-types';
+import React, { Component } from "react";
+import { Surface, CartesianGrid } from "recharts";
+import PropTypes from "prop-types";
 
 export default class CartesianGridComponent extends Component {
   constructor(props) {

@@ -1,9 +1,9 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
 import {
   ResponsiveContainer, ComposedChart, Line, Bar, Area, Scatter, XAxis,
   YAxis, ReferenceLine, ReferenceDot, Tooltip, Legend, CartesianGrid, Brush,
   LineChart,
-} from 'recharts';
+} from "recharts";
 
 // eslint-disable-next-line react/prefer-stateless-function
 export default class ComposedChartComponent extends Component {
@@ -36,7 +36,7 @@ export default class ComposedChartComponent extends Component {
               ]}
               scale="time"
               type="number"
-              tick={{ fontSize: 10, fill: 'red' }}
+              tick={{ fontSize: 10, fill: "red" }}
             />
             <YAxis />
             <Tooltip />

@@ -1,17 +1,17 @@
-import React from 'react';
-import PieComponent from './PieComponent';
+import React from "react";
+import PieComponent from "./PieComponent";
 
 export default {
-  title: 'Recharts/Pie',
+  title: "Recharts/Pie",
   component: PieComponent,
 };
 function Template(args) {
   return <PieComponent {...args} />;
 }
 const data = [
-  { name: 'iphone4', value: 120, fill: '#ff7300' },
-  { name: 'iphone4s', value: 500, fill: '#e5671a' },
-  { name: 'iphone5', value: 600, fill: '#907213' },
+  { name: "iphone4", value: 120, fill: "#ff7300" },
+  { name: "iphone4s", value: 500, fill: "#e5671a" },
+  { name: "iphone5", value: 600, fill: "#907213" },
 ];
 const sectors = [
   {

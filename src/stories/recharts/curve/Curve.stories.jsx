@@ -1,10 +1,10 @@
-import React from 'react';
-import { scaleOrdinal } from 'd3-scale';
-import { schemeCategory10 } from 'd3-scale-chromatic';
-import CurveComponent from './CurveComponent';
+import React from "react";
+import { scaleOrdinal } from "d3-scale";
+import { schemeCategory10 } from "d3-scale-chromatic";
+import CurveComponent from "./CurveComponent";
 
 export default {
-  title: 'Recharts/Curve',
+  title: "Recharts/Curve",
   component: CurveComponent,
 };
 function Template(args) {

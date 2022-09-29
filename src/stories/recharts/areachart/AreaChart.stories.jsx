@@ -1,9 +1,9 @@
-import React from 'react';
-import { subDays } from 'date-fns';
-import { AreaChartComponent } from './AreaChartComponent';
+import React from "react";
+import { subDays } from "date-fns";
+import { AreaChartComponent } from "./AreaChartComponent";
 
 export default {
-  title: 'Recharts/Area Chart',
+  title: "Recharts/Area Chart",
   component: AreaChartComponent,
 };
 

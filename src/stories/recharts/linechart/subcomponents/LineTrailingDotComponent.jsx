@@ -1,7 +1,7 @@
-import React from 'react';
+import React from "react";
 import {
   LineChart as RechartsLineChart, CartesianGrid, XAxis, YAxis, Tooltip, Legend, Line,
-} from 'recharts';
+} from "recharts";
 
 export function LineTrailingDotComponent({ data }) {
   const width = 770;
@@ -9,11 +9,11 @@ export function LineTrailingDotComponent({ data }) {
   const margin = {
     top: 5, right: 30, left: 20, bottom: 5,
   };
-  const strokeDashArray = '4';
-  const xaxisDataKey = 'month';
-  const type = 'monotone';
-  const lineDataKey = 'price';
-  const stroke = '#8884d8';
+  const strokeDashArray = "4";
+  const xaxisDataKey = "month";
+  const type = "monotone";
+  const lineDataKey = "price";
+  const stroke = "#8884d8";
 
   return (
     <RechartsLineChart width={width} height={height} data={data} margin={margin}>
@@ -28,7 +28,7 @@ export function LineTrailingDotComponent({ data }) {
         dataKey="lastDot"
         stroke={stroke}
         dot={{
-          stroke: 'red', strokeWidth: 1, r: 4, strokeDasharray: '',
+          stroke: "red", strokeWidth: 1, r: 4, strokeDasharray: "",
         }}
       />
     </RechartsLineChart>

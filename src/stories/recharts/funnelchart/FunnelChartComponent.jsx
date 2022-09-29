@@ -1,7 +1,7 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
 import {
   Funnel, FunnelChart, LabelList, ResponsiveContainer,
-} from 'recharts';
+} from "recharts";
 
 export default class FunnelChartComponent extends Component {
   constructor(props) {

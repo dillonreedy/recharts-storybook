@@ -1,8 +1,8 @@
-import React from 'react';
-import PolarGridComponent from './PolarGridComponent';
+import React from "react";
+import PolarGridComponent from "./PolarGridComponent";
 
 export default {
-  title: 'Recharts/Polar Grid',
+  title: "Recharts/Polar Grid",
   component: PolarGridComponent,
 };
 function Template(args) {

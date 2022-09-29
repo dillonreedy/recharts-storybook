@@ -1,8 +1,8 @@
-import React from 'react';
+import React from "react";
 import {
   LineChart as RechartsLineChart, CartesianGrid, XAxis, YAxis, Tooltip, Legend, Line,
-} from 'recharts';
-import PropTypes from 'prop-types';
+} from "recharts";
+import PropTypes from "prop-types";
 
 export function LineChart({
   width, height, data, margin, xaxisDataKey, strokeDashArray, type, lineDataKey, stroke, ...props
@@ -50,7 +50,7 @@ LineChart.propTypes = {
   /**
    * The interpolation type of line and customized interpolation function can be set to type. It's the same as type in Area.
    */
-  type: PropTypes.oneOf(['basis', 'basisClosed', 'basisOpen', 'linear', 'linearClosed', 'natural', 'monotoneX', 'monotoneY', 'monotone', 'step', 'stepBefore', 'stepAfter']),
+  type: PropTypes.oneOf(["basis", "basisClosed", "basisOpen", "linear", "linearClosed", "natural", "monotoneX", "monotoneY", "monotone", "step", "stepBefore", "stepAfter"]),
   /**
    * The key or getter of a group of data which should be unique in a LineChart.
    */
@@ -72,8 +72,8 @@ LineChart.defaultProps = {
   margin: {
     top: 5, right: 5, bottom: 5, left: 5,
   },
-  strokeDashArray: '1',
+  strokeDashArray: "1",
   xaxisDataKey: null,
-  type: 'linear',
+  type: "linear",
   lineDataKey: null,
 };

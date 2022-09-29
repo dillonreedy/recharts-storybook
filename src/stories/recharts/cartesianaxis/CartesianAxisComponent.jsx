@@ -1,5 +1,5 @@
-import React, { Component } from 'react';
-import { Surface, CartesianAxis, Label } from 'recharts';
+import React, { Component } from "react";
+import { Surface, CartesianAxis, Label } from "recharts";
 
 export default class CartesianAxisComponent extends Component {
   constructor(props) {

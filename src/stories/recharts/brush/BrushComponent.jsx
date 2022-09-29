@@ -1,5 +1,5 @@
-import React, { Component } from 'react';
-import { Surface, Brush } from 'recharts';
+import React, { Component } from "react";
+import { Surface, Brush } from "recharts";
 
 export default class BrushComponent extends Component {
   constructor(props) {
