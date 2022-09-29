@@ -19,17 +19,17 @@
     "mkdirp": "^1.0.4",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
-    "recharts": "^2.0.7"
+    "recharts": "^2.1.14"
   },
   "devDependencies": {
     "@babel/core": "^7.11.0",
     "@babel/preset-env": "^7.11.0",
     "@babel/preset-react": "^7.10.4",
     "@storybook/addon-actions": "^6.4.9",
-    "@storybook/addon-docs": "^6.4.9",
-    "@storybook/addon-essentials": "^6.4.9",
+    "@storybook/addon-docs": "^6.5.12",
+    "@storybook/addon-essentials": "^6.5.12",
     "@storybook/addon-links": "^6.4.9",
-    "@storybook/react": "^6.4.9",
+    "@storybook/react": "^6.5.12",
     "babel-loader": "^8.1.0",
     "css-loader": "^4.2.0",
     "eslint": "^8.24.0",
