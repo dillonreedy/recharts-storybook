@@ -1,4 +1,4 @@
-import * as _ from 'lodash'
+import * as _ from 'lodash';
 
 export function changeNumberOfData(data) {
   if (Array.isArray(data)) {
@@ -6,7 +6,7 @@ export function changeNumberOfData(data) {
   }
 
   if (typeof data === 'object') {
-    return _.mapValues(data, val => {
+    return _.mapValues(data, (val) => {
       if (typeof val === 'number') {
         return Math.floor(val * Math.random() * 2);
       }

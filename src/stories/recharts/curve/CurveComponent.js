@@ -1,13 +1,14 @@
 import React, { Component } from 'react';
 import { Surface, Curve, Layer } from 'recharts';
-import { curveCardinalClosed, curveCatmullRomOpen  } from 'd3-shape';
+import { curveCardinalClosed, curveCatmullRomOpen } from 'd3-shape';
 
 export default class CurveComponent extends Component {
   constructor(props) {
-      super(props)
+    super(props);
   }
-  render () {
-    const {points, scale, ticks} = this.props;
+
+  render() {
+    const { points, scale, ticks } = this.props;
 
     return (
       <Surface width={600} height={800}>
@@ -31,7 +32,7 @@ export default class CurveComponent extends Component {
 
           {
             points.map((entry, index) => (
-              <circle cx={entry.x} cy={entry.y} r={4} key={`circle-${index}`}/>
+              <circle cx={entry.x} cy={entry.y} r={4} key={`circle-${index}`} />
             ))
           }
         </Layer>
@@ -56,7 +57,7 @@ export default class CurveComponent extends Component {
 
           {
             points.map((entry, index) => (
-              <circle cx={entry.x} cy={entry.y} r={4} key={`circle-${index}`}/>
+              <circle cx={entry.x} cy={entry.y} r={4} key={`circle-${index}`} />
             ))
           }
         </Layer>
@@ -64,4 +65,3 @@ export default class CurveComponent extends Component {
     );
   }
 }
-

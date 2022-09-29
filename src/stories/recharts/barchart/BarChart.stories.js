@@ -7,15 +7,15 @@ const args = combine(barChartArgs, subcomponentArgs);
 
 export default {
   title: 'Recharts/Bar Chart/Props',
-  argTypes: BarChartService.getArgTypes()
+  argTypes: BarChartService.getArgTypes(),
 };
 
 const Template = BarChartService.getTemplate();
 
 export const Sizing = Template.bind({});
-Sizing.parameters = { controls: {include: ['width','height']}}
+Sizing.parameters = { controls: { include: ['width', 'height'] } };
 Sizing.args = args;
 
 export const Data = Template.bind({});
-Data.parameters = { controls: {include: 'data'}}
+Data.parameters = { controls: { include: 'data' } };
 Data.args = args;

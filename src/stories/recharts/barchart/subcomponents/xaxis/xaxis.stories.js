@@ -8,11 +8,11 @@ const args = combine(barChartArgs, subcomponentArgs);
 
 export default {
   title: 'Recharts/Bar Chart/Subcomponents',
-  argTypes: XAxisService.getArgTypes()
+  argTypes: XAxisService.getArgTypes(),
 };
 
 const TemplateCopy = BarChartService.getTemplate();
 
 export const XAxis = TemplateCopy.bind({});
-XAxis.parameters = { controls: {include: ['dataKey']}}
+XAxis.parameters = { controls: { include: ['dataKey'] } };
 XAxis.args = args;

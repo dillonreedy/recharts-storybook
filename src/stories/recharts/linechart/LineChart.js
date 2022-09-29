@@ -1,9 +1,12 @@
 import React from 'react';
-import { LineChart as RechartsLineChart, CartesianGrid, XAxis, YAxis, Tooltip, Legend, Line } from 'recharts';
+import {
+  LineChart as RechartsLineChart, CartesianGrid, XAxis, YAxis, Tooltip, Legend, Line,
+} from 'recharts';
 import PropTypes from 'prop-types';
 
-export const LineChart = (({width, height, data, margin, xaxisDataKey, strokeDashArray, type, lineDataKey, stroke, ...props}) => {
-
+export function LineChart({
+  width, height, data, margin, xaxisDataKey, strokeDashArray, type, lineDataKey, stroke, ...props
+}) {
   return (
     <RechartsLineChart width={width} height={height} data={data} margin={margin}>
       <CartesianGrid strokeDasharray={strokeDashArray} />
@@ -13,8 +16,8 @@ export const LineChart = (({width, height, data, margin, xaxisDataKey, strokeDas
       <Legend />
       <Line type={type} dataKey={lineDataKey} stroke={stroke} />
     </RechartsLineChart>
-  )
-});
+  );
+}
 
 LineChart.propTypes = {
   /**
@@ -42,33 +45,35 @@ LineChart.propTypes = {
    */
   xaxisDataKey: PropTypes.oneOfType([
     PropTypes.string,
-    PropTypes.number
+    PropTypes.number,
   ]),
   /**
    * The interpolation type of line and customized interpolation function can be set to type. It's the same as type in Area.
    */
-  type: PropTypes.oneOf(['basis' , 'basisClosed' , 'basisOpen' , 'linear' , 'linearClosed' , 'natural' , 'monotoneX' , 'monotoneY' , 'monotone' , 'step' , 'stepBefore' , 'stepAfter']),
+  type: PropTypes.oneOf(['basis', 'basisClosed', 'basisOpen', 'linear', 'linearClosed', 'natural', 'monotoneX', 'monotoneY', 'monotone', 'step', 'stepBefore', 'stepAfter']),
   /**
    * The key or getter of a group of data which should be unique in a LineChart.
    */
   lineDataKey: PropTypes.oneOfType([
     PropTypes.string,
     PropTypes.number,
-    PropTypes.func
+    PropTypes.func,
   ]),
   /**
-   * 
+   *
    */
-  stroke: PropTypes.string
-}
+  stroke: PropTypes.string,
+};
 
 LineChart.defaultProps = {
   width: 0,
   height: 0,
   data: [],
-  margin: { top: 5, right: 5, bottom: 5, left: 5 },
-  strokeDashArray: "1",
+  margin: {
+    top: 5, right: 5, bottom: 5, left: 5,
+  },
+  strokeDashArray: '1',
   xaxisDataKey: null,
   type: 'linear',
-  lineDataKey: null
-}
+  lineDataKey: null,
+};

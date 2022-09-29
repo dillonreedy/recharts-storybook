@@ -2,12 +2,10 @@ import React, { Component } from 'react';
 import { Surface, Brush } from 'recharts';
 
 export default class BrushComponent extends Component {
-
-
   constructor(props) {
     super(props);
   }
-  
+
   state = {
     simple: {
       startIndex: 0,
@@ -29,15 +27,17 @@ export default class BrushComponent extends Component {
     this.setState({
       gap: res,
     });
-  }
+  };
 
   renderTraveller = (props) => {
-    const { x, y, width, height } = props;
+    const {
+      x, y, width, height,
+    } = props;
 
-    return <path d={`M${x + width / 2},${y}L${x + width},${y + height / 2}L${x + width / 2},${y + height}L${x},${y + height / 2}Z`} fill="red" stroke="none" />
-  }
+    return <path d={`M${x + width / 2},${y}L${x + width},${y + height / 2}L${x + width / 2},${y + height}L${x},${y + height / 2}Z`} fill="red" stroke="none" />;
+  };
 
-  render () {
+  render() {
     const { simple, gap } = this.state;
     return (
       <div>

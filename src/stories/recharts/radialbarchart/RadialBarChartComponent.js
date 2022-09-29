@@ -1,22 +1,24 @@
 import React, { Component } from 'react';
 import * as _ from 'lodash';
-import { RadialBarChart, RadialBar, Cell, Legend, Tooltip,
-  LabelList } from 'recharts';
+import {
+  RadialBarChart, RadialBar, Cell, Legend, Tooltip,
+  LabelList,
+} from 'recharts';
 import { changeNumberOfData } from '../../../utils/utils';
-const initialState = {
-    data: [],
-    colors: []
-}
-export default class RadialBarChartComponent extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            data: [],
-            colors: []
-        }
-        this.chartRef = React.createRef();
 
-    }
+const initialState = {
+  data: [],
+  colors: [],
+};
+export default class RadialBarChartComponent extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      data: [],
+      colors: [],
+    };
+    this.chartRef = React.createRef();
+  }
 
   handleChangeData = () => {
     this.setState(() => _.mapValues(initialState, changeNumberOfData));
@@ -24,16 +26,15 @@ export default class RadialBarChartComponent extends Component {
 
   componentDidMount() {
     if (this.chartRef.current !== undefined && this.chartRef !== undefined && this.chartRef.current !== null && this.chartRef !== null) {
-      console.log(this.chartRef.current.getItemByXY({ x: 150, y: 100 }))
+      console.log(this.chartRef.current.getItemByXY({ x: 150, y: 100 }));
     }
   }
 
-  render () {
+  render() {
     const { data, colors, style } = this.props;
 
-
     return (
-      <div className='radial-bar-charts'>
+      <div className="radial-bar-charts">
         <a
           href="javascript: void(0);"
           className="btn update"
@@ -41,7 +42,7 @@ export default class RadialBarChartComponent extends Component {
         >
           change data
         </a>
-        <br/>
+        <br />
         <p>RadialBarChart</p>
         <div className="radial-bar-chart-wrapper">
           <RadialBarChart
@@ -55,16 +56,16 @@ export default class RadialBarChartComponent extends Component {
             data={data}
             ref={this.chartRef.current}
           >
-            <RadialBar minPointSize={15} background dataKey="uv" >
+            <RadialBar minPointSize={15} background dataKey="uv">
               {
                 data.map((entry, index) => (
-                  <Cell key={`cell-${index}`} fill={colors[index]}/>
+                  <Cell key={`cell-${index}`} fill={colors[index]} />
                 ))
               }
               <LabelList position="insideEnd" fill="#fff" fontSize={10} />
             </RadialBar>
             <Legend iconSize={10} width={120} height={140} layout="vertical" verticalAlign="middle" wrapperStyle={style} />
-            <Tooltip/>
+            <Tooltip />
           </RadialBarChart>
         </div>
 
@@ -85,7 +86,7 @@ export default class RadialBarChartComponent extends Component {
               <LabelList position="end" />
             </RadialBar>
             <Legend iconSize={10} width={120} height={140} layout="vertical" verticalAlign="middle" wrapperStyle={style} />
-            <Tooltip/>
+            <Tooltip />
           </RadialBarChart>
         </div>
       </div>

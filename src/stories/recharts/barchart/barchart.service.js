@@ -1,13 +1,16 @@
 import React from 'react';
-import { BarChart, CartesianGrid, XAxis, YAxis, Tooltip, Legend, Bar } from 'recharts';
+import {
+  BarChart, CartesianGrid, XAxis, YAxis, Tooltip, Legend, Bar,
+} from 'recharts';
 import { BarService } from './subcomponents/bar/bar.service';
 import { XAxisService } from './subcomponents/xaxis/xaxis.service';
 
 export class BarChartService {
-  static getTemplate = () => {
-    return (({dataKey, pvStroke, uvStroke, strokeDasharray, barDataKey, fill, ...props}) => {  
-      return (
-        <BarChart {...props}>
+  static getTemplate = () => (function ({
+    dataKey, pvStroke, uvStroke, strokeDasharray, barDataKey, fill, ...props
+  }) {
+    return (
+      <BarChart {...props}>
         <CartesianGrid strokeDasharray={strokeDasharray} />
         <XAxis dataKey={dataKey} />
         <YAxis />
@@ -15,29 +18,28 @@ export class BarChartService {
         <Legend />
         <Bar dataKey={barDataKey} fill={fill} />
       </BarChart>
-      ) 
-    });
-  } 
+    );
+  });
 
   static getArgTypes() {
     return {
       width: {
         description: 'The width of the barchart.',
-        defaultValue: { summary: '0'},
+        defaultValue: { summary: '0' },
       },
       height: {
         description: 'The height of the barchart.',
-        defaultValue: { summary: '0'},
+        defaultValue: { summary: '0' },
       },
       data: {
         description: 'The source data, in which each element is an object.',
-        defaultValue: { summary: '[]'},
+        defaultValue: { summary: '[]' },
       },
       margin: {
         description: 'The sizes of whitespace around the container.',
-        defaultValue: { summary: '{ top: 5, right: 5, bottom: 5, left: 5 }'},
-      }
-    }
+        defaultValue: { summary: '{ top: 5, right: 5, bottom: 5, left: 5 }' },
+      },
+    };
   }
 
   static getArgs() {
@@ -73,9 +75,13 @@ export class BarChartService {
         uv: 3490,
       },
     ];
-    const margin = { top: 5, right: 30, left: 20, fabottom: 5 };
-    
-    return { width, height, data, margin };
+    const margin = {
+      top: 5, right: 30, left: 20, fabottom: 5,
+    };
+
+    return {
+      width, height, data, margin,
+    };
   }
 
   static getSubcomponentArgs() {
@@ -83,6 +89,5 @@ export class BarChartService {
       ...XAxisService.getArgs(),
       ...BarService.getArgs(),
     };
-  };
-  
+  }
 }

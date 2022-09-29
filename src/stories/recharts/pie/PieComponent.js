@@ -1,15 +1,13 @@
 import React, { Component } from 'react';
 import { Surface, Pie } from 'recharts';
 
-
 export default class PieComponent extends Component {
-
   constructor(props) {
     super(props);
   }
 
-  render () {
-    const {data, sectors} = this.props;
+  render() {
+    const { data, sectors } = this.props;
     return (
       <Surface width={500} height={500}>
         <Pie
@@ -26,9 +24,8 @@ export default class PieComponent extends Component {
           fill="#fff"
           stroke="#000"
         />
-        <line x1={0} y1={250} x2={500} y2={250} stroke="black"/>
+        <line x1={0} y1={250} x2={500} y2={250} stroke="black" />
       </Surface>
     );
   }
 }
-

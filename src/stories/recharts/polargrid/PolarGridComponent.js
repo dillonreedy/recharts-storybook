@@ -2,14 +2,12 @@ import React, { Component } from 'react';
 import { Surface, PolarGrid } from 'recharts';
 
 export default class PolarGridComponent extends Component {
-    constructor(props) {
-        super(props);
-    }
+  constructor(props) {
+    super(props);
+  }
 
-
-  render () {
-      const {polarAngles, polarRadius} = this.props;
-
+  render() {
+    const { polarAngles, polarRadius } = this.props;
 
     return (
       <Surface width={500} height={500}>
@@ -22,7 +20,7 @@ export default class PolarGridComponent extends Component {
           height={500}
           polarAngles={polarAngles}
           polarRadius={polarRadius}
-          radialLines={true}
+          radialLines
         />
       </Surface>
     );
