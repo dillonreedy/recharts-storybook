@@ -7,22 +7,24 @@ import {
   Area,
   Tooltip,
   CartesianGrid,
+  TooltipProps,
 } from "recharts";
 import { format, parseISO } from "date-fns";
 import "./area-chart.css";
+import { NameType, ValueType } from "recharts/types/component/DefaultTooltipContent";
+import { CategoricalChartProps } from "recharts/types/chart/generateCategoricalChart";
 
-function CustomTooltip({ active, payload, label }) {
+function CustomTooltip<TValue extends ValueType, TName extends NameType>({ active, payload, label }: TooltipProps<TValue, TName>): JSX.Element | null {
   console.log(payload);
   if (typeof payload !== "undefined") {
     if (active) {
       return (
         <div className="tooltip">
-          <h4>{format(parseISO(label), "eeee, d MMM, yyyy")}</h4>
+          <h4>{label && format(parseISO(label), "eeee, d MMM, yyyy")}</h4>
           <p>
-            $
-            {payload[0].value.toFixed(2)}
-            {" "}
-            CAD
+            {payload[0]?.value && typeof payload[0]?.value === "number" && (<>$
+            {payload[0]?.value?.toFixed(2)}
+            {" "}CAD</>)}
           </p>
         </div>
       );
@@ -31,7 +33,7 @@ function CustomTooltip({ active, payload, label }) {
   return null;
 }
 
-export function AreaChartComponent({ data }) {
+export function AreaChartComponent({ data }: CategoricalChartProps): JSX.Element {
   return (
     <ResponsiveContainer width="100%" height={400}>
       <AreaChart data={data}>
@@ -58,7 +60,7 @@ export function AreaChartComponent({ data }) {
         />
 
         <YAxis
-          datakey="value"
+          dataKey="value"
           axisLine={false}
           tickLine={false}
           tickCount={8}
